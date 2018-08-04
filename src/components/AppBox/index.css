@@ -1,12 +1,16 @@
+.app-box.horizontal {
+  display: flex;
+}
+
 .app-box-img {
-  border-radius: 15px;
+  border-radius: 20%;
   overflow: hidden;
 }
 .app-box.circle-icon .app-box-img {
   border-radius: 50%;
 }
 .app-box.horizontal .app-box-img {
-  /* @TODO: add style of hor img */
+  width: 75px;
 }
 
 .app-box-img img {
@@ -20,13 +24,16 @@
 
 .app-box-name {
   font-size: 14px;
-  height: 40px;
+  max-height: 40px;
   line-height: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .app-box.vertical .app-box-name {
   margin-top: 10px;
+}
+.app-box.horizontal .app-box-name {
+  margin: 5px 0;
 }
 
 .app-box-category {
