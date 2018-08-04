@@ -1,0 +1,23 @@
+.recommended-list {
+  border-bottom: 1px solid #B7B7B7;
+}
+
+.recommended-list h3 {
+  margin: 10px 5px;
+}
+
+.recommended-app-list-wrap {
+  overflow-x: auto;
+  margin: 10px 0;
+}
+
+ul.recommended-app-list {
+  display: inline-flex;
+  padding: 0;
+  list-style: none;
+}
+
+ul.recommended-app-list li {
+  width: 90px;
+  margin: 0 8px;
+}
