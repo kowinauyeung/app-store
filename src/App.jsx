@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <SearchBar onChange={(e) => {console.log(e);}} />
+      <SearchBar onChange={(e) => { console.log(e); }} />
     </div>
   );
 }
