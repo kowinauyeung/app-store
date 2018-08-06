@@ -11,6 +11,7 @@
 }
 .app-box.horizontal .app-box-img {
   width: 75px;
+  height: 75px;
 }
 
 .app-box-img img {
@@ -19,7 +20,9 @@
 }
 
 .app-box.horizontal .app-box-details {
-  /* @TODO: add style of hor details; */
+  width: calc(100% - 95px);
+  overflow: hidden;
+  margin: 0 10px;
 }
 
 .app-box-name {
@@ -34,6 +37,9 @@
 }
 .app-box.horizontal .app-box-name {
   margin: 5px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .app-box-category {
