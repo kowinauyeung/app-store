@@ -26,9 +26,10 @@ describe('AppBox', () => {
   });
 
   it('App info render correctly', () => {
-    expect(appBox.find('img').props().src).toBe(app.image);
+    expect(appBox.find('img')).toHaveProp({ src: app.image });
     expect(appBox.find('.app-box-name')).toHaveText(app.name);
     expect(appBox.find('.app-box-category')).toHaveText(app.category);
-    // @TODO: add assertion of rating
+    expect(appBox.find('Rating')).toHaveProp({ value: app.averageUserRating });
+    expect(appBox.find('.rating-box-count')).toHaveText(`(${app.userRatingCount})`);
   });
 });
