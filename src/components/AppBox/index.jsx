@@ -39,7 +39,6 @@ function AppBox(props) {
           {app.category}
         </div>
         {
-          // @TODO: add rating ui
           (typeof app.averageUserRating === 'number') && (
             <div className="rating-box">
               <div className="rating-box-star">
