@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Rating from '../Rating';
 import './index.css';
 
 const propTypes = {
@@ -39,6 +40,16 @@ function AppBox(props) {
         </div>
         {
           // @TODO: add rating ui
+          (typeof app.averageUserRating === 'number') && (
+            <div className="rating-box">
+              <div className="rating-box-star">
+                <Rating value={app.averageUserRating} />
+              </div>
+              <div className="rating-box-count">
+                {`(${app.userRatingCount})`}
+              </div>
+            </div>
+          )
         }
       </div>
     </div>

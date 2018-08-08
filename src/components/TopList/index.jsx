@@ -29,7 +29,7 @@ const defaultProps = {
       name: 'Hello Stars - Fastone Games',
       image: 'https://is3-ssl.mzstatic.com/image/thumb/Purple118/v4/08/ec/49/08ec49a9-1715-80e0-41c4-7f40189e4cf2/AppIcon-1x_U007emarketing-85-220-6.png/100x100bb-85.png',
       category: '遊戲',
-      averageUserRating: 4.5,
+      averageUserRating: 5,
       userRatingCount: 100,
     },
     {
@@ -37,7 +37,7 @@ const defaultProps = {
       name: 'Hello Stars - Fastone Games',
       image: 'https://is3-ssl.mzstatic.com/image/thumb/Purple118/v4/08/ec/49/08ec49a9-1715-80e0-41c4-7f40189e4cf2/AppIcon-1x_U007emarketing-85-220-6.png/100x100bb-85.png',
       category: '遊戲',
-      averageUserRating: 4.5,
+      averageUserRating: 4,
       userRatingCount: 100,
     },
     {
@@ -45,7 +45,7 @@ const defaultProps = {
       name: 'Hello Stars - Fastone Games',
       image: 'https://is3-ssl.mzstatic.com/image/thumb/Purple118/v4/08/ec/49/08ec49a9-1715-80e0-41c4-7f40189e4cf2/AppIcon-1x_U007emarketing-85-220-6.png/100x100bb-85.png',
       category: '遊戲',
-      averageUserRating: 4.5,
+      averageUserRating: 3.5,
       userRatingCount: 100,
     },
     {
@@ -53,7 +53,7 @@ const defaultProps = {
       name: 'Hello Stars - Fastone Games',
       image: 'https://is3-ssl.mzstatic.com/image/thumb/Purple118/v4/08/ec/49/08ec49a9-1715-80e0-41c4-7f40189e4cf2/AppIcon-1x_U007emarketing-85-220-6.png/100x100bb-85.png',
       category: '遊戲',
-      averageUserRating: 4.5,
+      averageUserRating: 2,
       userRatingCount: 100,
     },
     {
@@ -61,7 +61,7 @@ const defaultProps = {
       name: 'Hello Stars - Fastone Games',
       image: 'https://is3-ssl.mzstatic.com/image/thumb/Purple118/v4/08/ec/49/08ec49a9-1715-80e0-41c4-7f40189e4cf2/AppIcon-1x_U007emarketing-85-220-6.png/100x100bb-85.png',
       category: '遊戲',
-      averageUserRating: 4.5,
+      averageUserRating: 0.5,
       userRatingCount: 100,
     },
   ],
