@@ -1,7 +1,18 @@
 .search-bar {
   background: #F9F9F9;
-  padding: 10px 15px;
-  border-bottom: 1px solid #B7B7B7;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.search-bar:after {
+  content: "";
+  background: #B7B7B7;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: scaleY(0.5);
 }
 
 .search-bar-inner {
