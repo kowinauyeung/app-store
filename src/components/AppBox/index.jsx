@@ -13,15 +13,22 @@ const propTypes = {
   }).isRequired,
   vertical: PropTypes.bool,
   isCircleIcon: PropTypes.bool,
+  showRating: PropTypes.bool,
 };
 
 const defaultProps = {
   vertical: true,
   isCircleIcon: false,
+  showRating: false,
 };
 
 function AppBox(props) {
-  const { app, vertical, isCircleIcon } = props;
+  const {
+    app,
+    vertical,
+    isCircleIcon,
+    showRating,
+  } = props;
   let className = 'app-box';
   if (!vertical) className += ' horizontal';
   else className += ' vertical';
@@ -39,15 +46,21 @@ function AppBox(props) {
           {app.category}
         </div>
         {
-          (typeof app.averageUserRating === 'number') && (
-            <div className="rating-box">
-              <div className="rating-box-star">
-                <Rating value={app.averageUserRating} />
+          showRating && (
+            ((typeof app.averageUserRating === 'number') && (
+              <div className="rating-box">
+                <div className="rating-box-star">
+                  <Rating value={app.averageUserRating} />
+                </div>
+                <div className="rating-box-count">
+                  {`(${app.userRatingCount})`}
+                </div>
               </div>
-              <div className="rating-box-count">
-                {`(${app.userRatingCount})`}
+            )) || (
+              <div className="rating-box">
+                Loading...
               </div>
-            </div>
+            )
           )
         }
       </div>

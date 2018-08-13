@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import status from './status';
+import apps from './apps';
 
 const reducers = combineReducers({
-  status,
+  apps,
 });
 
 export default reducers;
