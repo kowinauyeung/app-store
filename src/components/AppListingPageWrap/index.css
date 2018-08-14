@@ -1,0 +1,27 @@
+.app-listing-page-wrap {
+  height: 100vh;
+}
+
+.search-bar-container {
+  height: 46px;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  opacity: 0.9;
+}
+
+.app-listing-container {
+  padding-top: 46px;
+  max-height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.app-listing-scroll-wrap:before,
+.app-listing-scroll-wrap:after {
+  content: "";
+  display: table;
+}
+.app-listing-scroll-wrap:after {
+  clear: both;
+}

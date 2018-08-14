@@ -1,23 +1,50 @@
 .recommended-list {
-  border-bottom: 1px solid #B7B7B7;
+  position: relative;
+}
+
+.recommended-list:after {
+  content: "";
+  background: #B7B7B7;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: scaleY(0.5);
 }
 
 .recommended-list h3 {
-  margin: 10px 5px;
+  margin: 15px;
 }
 
 .recommended-app-list-wrap {
   overflow-x: auto;
-  margin: 10px 0;
+  -webkit-overflow-scrolling: touch;
 }
 
 ul.recommended-app-list {
   display: inline-flex;
   padding: 0;
   list-style: none;
+  margin: 0 0 10px 0;
 }
 
 ul.recommended-app-list li {
-  width: 90px;
-  margin: 0 8px;
+  width: 85px;
+  margin-left: 15px;
+}
+ul.recommended-app-list li:last-child {
+  margin-right: 15px;
+}
+
+.recommended-list-placeholder {
+  height: 162px;
+}
+
+.recommended-list-error-text {
+  font-size: 20px;
+  line-height: 162px;
+  text-align: center;
+  font-weight: bold;
+  color: #9c9c9c;
 }

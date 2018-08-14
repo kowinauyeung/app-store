@@ -10,8 +10,8 @@
   border-radius: 50%;
 }
 .app-box.horizontal .app-box-img {
-  width: 75px;
-  height: 75px;
+  width: 70px;
+  height: 70px;
 }
 
 .app-box-img img {
@@ -26,19 +26,24 @@
 }
 
 .app-box-name {
-  font-size: 14px;
-  max-height: 40px;
-  line-height: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .app-box.vertical .app-box-name {
   margin-top: 10px;
+  display: -webkit-box;
+  font-size: 12px;
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 16px;
+  max-height: 32px;   
 }
 .app-box.horizontal .app-box-name {
+  font-size: 16px;
   margin: 5px 0;
-  overflow: hidden;
   text-overflow: ellipsis;
+  overflow: hidden;
   white-space: nowrap;
 }
 
@@ -48,4 +53,20 @@
   font-weight: lighter;
   white-space: nowrap;
   overflow: hidden;
+  margin-top: 8px;
+}
+
+.rating-box {
+  display: flex;
+  margin-top: 10px;
+}
+
+.rating-box-star {
+  width: 60px;
+}
+
+.rating-box-count {
+  font-size: 10px;
+  color: #767675;
+  margin-left: 5px;
 }
