@@ -19,6 +19,7 @@
 
 .recommended-app-list-wrap {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 ul.recommended-app-list {
