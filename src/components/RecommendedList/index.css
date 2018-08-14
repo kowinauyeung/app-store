@@ -36,3 +36,7 @@ ul.recommended-app-list li {
 ul.recommended-app-list li:last-child {
   margin-right: 15px;
 }
+
+.recommended-list-placeholder {
+  height: 162px;
+}
