@@ -20,7 +20,7 @@ For development, you have to create an environment file name with `.env.local` t
 ```
 npm start
 ```
-**Before committing the codes, please make sure the linting check and unit test are pass.
+*Before committing the codes, please make sure the linting check and unit test are pass.*
 
 For production, you will have to build the project by running the below command:
 ```
@@ -37,7 +37,7 @@ npm run lint
 ```
 
 ## Running test
-This project is using [Jest](https://jestjs.io/en/) as test running gathering with [Enzyme](https://github.com/airbnb/enzyme) and [enzyme-matchers](https://github.com/FormidableLabs/enzyme-matchers).
+This project is using [Jest](https://jestjs.io/en/) as test runner gathering with [Enzyme](https://github.com/airbnb/enzyme) and [enzyme-matchers](https://github.com/FormidableLabs/enzyme-matchers).
 
 For running the test watcher, run the below command:
 ```
@@ -71,7 +71,7 @@ React is a component base library and it encourage developer to build the webpag
 
 ### Other features
 When there is no result which match the search keywords, there will be a text box displayed.
-![Image of demonstration of other features](https://i.imgur.com/fFP4Sih.png)
+![Image of demonstration of other features](https://i.imgur.com/fFP4Sih.png =375x)
 
 ### Scroll-in animation and PWA
 Because of the limitation of time, this 2 features are not implemented. But they will be developed it in the future.
