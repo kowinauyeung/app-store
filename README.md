@@ -81,9 +81,11 @@ npm test -- --coverage
 React is a component base library and it encourage developer to build the webpage by component so that each component can be developed and debugged individually. I think if applying the SASS or LESS, the css pre-processor which aimed to group the style for resuse, it will not accord to the idea of React. Therefore, I chose to use the original css.
 
 ### Other features
+- Feature 1
 When there is no result which match the search keywords, there will be a text box displayed.
 <img src="https://i.imgur.com/fFP4Sih.png" width="375">
 
+- Feature 2
 For iOS user, the scroll animation is added.
 <img src="https://i.imgur.com/W4bdFP4.gif" width="375">
 
