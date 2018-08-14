@@ -29,7 +29,7 @@ function RecommendedList(props) {
       <div className="recommended-app-list-wrap">
         {
           (
-            (!isFetching) && (
+            (isFetching) && (
               <div className="recommended-list-placeholder">
                 <LoadingSpinner />
               </div>
@@ -38,7 +38,9 @@ function RecommendedList(props) {
           || (
             (isFetchingFailed) && (
               <div className="recommended-list-placeholder">
-                <LoadingSpinner />
+                <div className="recommended-list-error-text">
+                  Network error
+                </div>
               </div>
             )
           )
