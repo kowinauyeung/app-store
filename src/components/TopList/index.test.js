@@ -30,19 +30,39 @@ describe('TopList', () => {
       userRatingCount: 199,
     },
   ];
-  const recommendedList = shallow(<TopList list={mockAppList} />);
+
+  const topList = shallow(
+    <TopList
+      list={mockAppList}
+      isFetching={false}
+      isFetchingFailed={false}
+    />
+  );
+
   it('AppBoxes to be rendered', () => {
-    expect(recommendedList.find('AppBox').length).toBe(3);
+    expect(topList.find('AppBox').length).toBe(3);
     mockAppList.push({
       id: '4',
       name: 'name4',
       image: 'http://example.com/img4',
       category: 'cat4',
     });
-    recommendedList.setProps({ list: mockAppList });
-    expect(recommendedList.find('AppBox').length).toBe(4);
+    topList.setProps({ list: mockAppList });
+    expect(topList.find('AppBox').length).toBe(4);
     mockAppList.pop();
-    recommendedList.setProps({ list: mockAppList });
-    expect(recommendedList.find('AppBox').length).toBe(3);
+    topList.setProps({ list: mockAppList });
+    expect(topList.find('AppBox').length).toBe(3);
+  });
+
+  it('Loading spinner to be rendered if feteching data', () => {
+    topList.setProps({ isFetching: true });
+    expect(topList.find('LoadingSpinner')).toExist();
+  });
+
+  it('Network error text to be rendered if feteching data failed', () => {
+    topList.setProps({ isFetching: false, isFetchingFailed: true });
+    const errText = topList.find('.top-list-error-text');
+    expect(errText).toExist();
+    expect(errText).toHaveText('Network error');
   });
 });
