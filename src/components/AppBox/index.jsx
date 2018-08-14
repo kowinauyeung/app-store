@@ -47,7 +47,7 @@ function AppBox(props) {
         </div>
         {
           showRating && (
-            ((typeof app.averageUserRating === 'number') && (
+            (typeof app.averageUserRating === 'number') && (
               <div className="rating-box">
                 <div className="rating-box-star">
                   <Rating value={app.averageUserRating} />
@@ -55,10 +55,6 @@ function AppBox(props) {
                 <div className="rating-box-count">
                   {`(${app.userRatingCount})`}
                 </div>
-              </div>
-            )) || (
-              <div className="rating-box">
-                Loading...
               </div>
             )
           )
