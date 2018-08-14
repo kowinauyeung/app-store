@@ -1,0 +1,38 @@
+.search-bar {
+  background: #F9F9F9;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.search-bar:after {
+  content: "";
+  background: #B7B7B7;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: scaleY(0.5);
+}
+
+.search-bar-inner {
+  background: #E4E5E6;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.search-bar-inner > input {
+  display: block;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: inherit;
+  padding: 5px 10px;
+}
+
+.search-bar-inner > input:focus {
+  text-align: left;
+}

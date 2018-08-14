@@ -1,0 +1,54 @@
+.recommended-list {
+  position: relative;
+}
+
+.recommended-list:after {
+  content: "";
+  background: #B7B7B7;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: scaleY(0.5);
+}
+
+.recommended-list h3 {
+  margin: 15px;
+}
+
+.recommended-app-list-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+ul.recommended-app-list {
+  display: inline-flex;
+  padding: 0;
+  list-style: none;
+  margin: 0 0 10px 0;
+}
+
+ul.recommended-app-list li {
+  width: 85px;
+  margin-left: 15px;
+}
+ul.recommended-app-list li:last-child {
+  margin-right: 15px;
+}
+
+.recommended-list-placeholder {
+  height: 162px;
+}
+
+.recommended-list-error-text {
+  font-weight: bold;
+}
+
+.recommended-list-error-text,
+.recommended-list-no-result-text {
+  font-size: 20px;
+  line-height: 162px;
+  text-align: center;
+  color: #9c9c9c;
+}
