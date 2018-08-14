@@ -71,7 +71,7 @@ React is a component base library and it encourage developer to build the webpag
 
 ### Other features
 When there is no result which match the search keywords, there will be a text box displayed.
-![Image of demonstration of other features](https://i.imgur.com/fFP4Sih.png =375x)
+![Image of demonstration of other features](https://i.imgur.com/fFP4Sih.png | width=375)
 
 ### Scroll-in animation and PWA
 Because of the limitation of time, this 2 features are not implemented. But they will be developed it in the future.
