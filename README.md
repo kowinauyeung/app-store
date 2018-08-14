@@ -28,6 +28,17 @@ npm run build
 ```
 The files will be generate into `./build/`.
 
+## Environment setting
+The `.env` file will contain the environment variables that will be used in different environment such as production and local. Therefore, the environment settings should be reviewed before you start to develop the application or planning to launch the application.
+
+The below illustrate the look and feel of `.env` file:
+```
+REACT_APP_API_TOP_LIST=https://itunes.apple.com/hk/rss/topfreeapplications/limit=100/json
+REACT_APP_API_RECOMMENDED_LIST=https://itunes.apple.com/hk/rss/topgrossingapplications/limit=10/json
+REACT_APP_API_APP_LOOK_UP=https://itunes.apple.com/hk/lookup
+```
+There might be the more environment variable when the application became more bigger.
+
 ## Linting
 This project is following the JS style guide published by [Airbnb](https://github.com/airbnb/javascript/tree/master/react).
 
