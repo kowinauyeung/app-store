@@ -14,4 +14,14 @@
   padding-top: 46px;
   max-height: 100%;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.app-listing-scroll-wrap:before,
+.app-listing-scroll-wrap:after {
+  content: "";
+  display: table;
+}
+.app-listing-scroll-wrap:after {
+  clear: both;
 }

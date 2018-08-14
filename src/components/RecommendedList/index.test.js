@@ -24,7 +24,15 @@ describe('RecommendedList', () => {
       category: 'cat3',
     },
   ];
-  const recommendedList = shallow(<RecommendedList list={mockAppList} />);
+
+  const recommendedList = shallow(
+    <RecommendedList
+      list={mockAppList}
+      isFetching={false}
+      isFetchingFailed={false}
+    />
+  );
+
   it('AppBoxes to be rendered', () => {
     expect(recommendedList.find('AppBox').length).toBe(3);
     mockAppList.push({
@@ -38,5 +46,17 @@ describe('RecommendedList', () => {
     mockAppList.pop();
     recommendedList.setProps({ list: mockAppList });
     expect(recommendedList.find('AppBox').length).toBe(3);
+  });
+
+  it('Loading spinner to be rendered if feteching data', () => {
+    recommendedList.setProps({ isFetching: true });
+    expect(recommendedList.find('LoadingSpinner')).toExist();
+  });
+
+  it('Network error text to be rendered if feteching data failed', () => {
+    recommendedList.setProps({ isFetching: false, isFetchingFailed: true });
+    const errText = recommendedList.find('.recommended-list-error-text');
+    expect(errText).toExist();
+    expect(errText).toHaveText('Network error');
   });
 });

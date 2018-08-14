@@ -42,7 +42,10 @@ const defaultProps = {
   topList: null,
 };
 
-const filterAppList = (list, filter) => {
+const pageItem = 10;
+const maxItem = 100;
+
+export const filterAppList = (list, filter) => {
   if (!list || !filter) return list;
   const fil = filter.toLocaleLowerCase();
   return list.filter(app => (
@@ -54,27 +57,86 @@ const filterAppList = (list, filter) => {
 };
 
 class AppListingPageWrap extends Component {
+  constructor() {
+    super();
+    this.appListingContiner = null;
+    this.appListingScrollWrap = null;
+    this.enableScroll = true;
+    this.state = {
+      page: 1,
+    };
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
   componentDidMount() {
-    const { fetchRecommendedList, fetchTopList } = this.props;
-    fetchRecommendedList();
-    fetchTopList();
+    const {
+      fetchRecommendedList,
+      fetchTopList,
+      recommendedList,
+      topList,
+    } = this.props;
+    if (recommendedList === null) fetchRecommendedList();
+    if (topList === null) fetchTopList();
+    this.appListingContiner.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    this.appListingContiner.removeEventListener('scroll', this.handleScroll);
+  }
+
+  nextPage() {
+    const { page } = this.state;
+    const maxPage = maxItem / pageItem;
+    this.setState({
+      page: Math.min((page + 1), maxPage),
+    });
+  }
+
+  handleScroll() {
+    if (!this.enableScroll) return;
+    const wrapperHeight = this.appListingContiner.getBoundingClientRect().height - 46;
+    const contentHeight = this.appListingScrollWrap.getBoundingClientRect().height;
+    const wrapperScrollTop = this.appListingContiner.scrollTop;
+    if ((contentHeight - wrapperScrollTop) <= wrapperHeight) {
+      this.enableScroll = false;
+      setTimeout(() => {
+        this.nextPage();
+        this.enableScroll = true;
+      }, 300);
+    }
   }
 
   render() {
     const {
       search,
+      recommended,
       recommendedList,
+      top,
       topList,
       filter,
     } = this.props;
+    const { page } = this.state;
     return (
       <div className="app-listing-page-wrap">
         <div className="search-bar-container">
           <SearchBar onChange={(val) => { search(val); }} />
         </div>
-        <div className="app-listing-container">
-          <RecommendedList list={filterAppList(recommendedList, filter)} />
-          <TopList list={filterAppList(topList, filter)} />
+        <div className="app-listing-container" ref={(ref) => { this.appListingContiner = ref; }}>
+          <div
+            className="app-listing-scroll-wrap"
+            ref={(ref) => { this.appListingScrollWrap = ref; }}
+          >
+            <RecommendedList
+              isFetching={recommended.isFetching}
+              isFetchingFailed={recommended.isFetchingFailed}
+              list={filterAppList(recommendedList, filter)}
+            />
+            <TopList
+              isFetching={top.isFetching}
+              isFetchingFailed={top.isFetchingFailed}
+              list={(!topList) ? null : filterAppList(topList, filter).slice(0, page * pageItem)}
+            />
+          </div>
         </div>
       </div>
     );

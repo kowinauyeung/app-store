@@ -19,6 +19,7 @@
 
 .recommended-app-list-wrap {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 ul.recommended-app-list {
@@ -34,4 +35,16 @@ ul.recommended-app-list li {
 }
 ul.recommended-app-list li:last-child {
   margin-right: 15px;
+}
+
+.recommended-list-placeholder {
+  height: 162px;
+}
+
+.recommended-list-error-text {
+  font-size: 20px;
+  line-height: 162px;
+  text-align: center;
+  font-weight: bold;
+  color: #9c9c9c;
 }

@@ -29,6 +29,8 @@ describe('AppBox', () => {
     expect(appBox.find('img')).toHaveProp({ src: app.image });
     expect(appBox.find('.app-box-name')).toHaveText(app.name);
     expect(appBox.find('.app-box-category')).toHaveText(app.category);
+    expect(appBox.find('.rating-box')).not.toExist();
+    appBox.setProps({ showRating: true });
     expect(appBox.find('Rating')).toHaveProp({ value: app.averageUserRating });
     expect(appBox.find('.rating-box-count')).toHaveText(`(${app.userRatingCount})`);
   });
