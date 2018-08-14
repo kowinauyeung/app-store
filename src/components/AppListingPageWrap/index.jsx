@@ -45,7 +45,7 @@ const defaultProps = {
 const pageItem = 10;
 const maxItem = 100;
 
-const filterAppList = (list, filter) => {
+export const filterAppList = (list, filter) => {
   if (!list || !filter) return list;
   const fil = filter.toLocaleLowerCase();
   return list.filter(app => (
