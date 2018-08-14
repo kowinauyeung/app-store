@@ -83,12 +83,12 @@ React is a component base library and it encourage developer to build the webpag
 ### Other features
 - Feature 1
 
-**When there is no result which match the search keywords, there will be a text box displayed.**
+**When there is no result which match the search keywords, there will be a text box displayed.**<br>
 <img src="https://i.imgur.com/fFP4Sih.png" width="375">
 
 - Feature 2
 
-**For iOS user, the scroll animation is added.**
+**For iOS user, the scroll animation is added.**<br>
 <img src="https://i.imgur.com/W4bdFP4.gif" width="375">
 
 ### Scroll-in animation and PWA
