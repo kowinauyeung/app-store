@@ -57,9 +57,13 @@ ul.top-app-list li:last-child:after {
 }
 
 .top-list-error-text {
+  font-weight: bold;
+}
+
+.top-list-error-text,
+.top-list-no-result-text {
   font-size: 20px;
   line-height: 100vw;
   text-align: center;
-  font-weight: bold;
   color: #9c9c9c;
 }

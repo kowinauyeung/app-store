@@ -65,4 +65,11 @@ describe('TopList', () => {
     expect(errText).toExist();
     expect(errText).toHaveText('Network error');
   });
+
+  it('No result text to be rendered if no result', () => {
+    topList.setProps({ isFetching: false, isFetchingFailed: false, list: [] });
+    const errText = topList.find('.top-list-no-result-text');
+    expect(errText).toExist();
+    expect(errText).toHaveText('No result.');
+  });
 });

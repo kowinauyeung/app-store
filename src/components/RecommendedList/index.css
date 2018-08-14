@@ -42,9 +42,13 @@ ul.recommended-app-list li:last-child {
 }
 
 .recommended-list-error-text {
+  font-weight: bold;
+}
+
+.recommended-list-error-text,
+.recommended-list-no-result-text {
   font-size: 20px;
   line-height: 162px;
   text-align: center;
-  font-weight: bold;
   color: #9c9c9c;
 }

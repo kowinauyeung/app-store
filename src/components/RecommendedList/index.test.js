@@ -59,4 +59,11 @@ describe('RecommendedList', () => {
     expect(errText).toExist();
     expect(errText).toHaveText('Network error');
   });
+
+  it('No result text to be rendered if no result', () => {
+    recommendedList.setProps({ isFetching: false, isFetchingFailed: false, list: [] });
+    const errText = recommendedList.find('.recommended-list-no-result-text');
+    expect(errText).toExist();
+    expect(errText).toHaveText('No result.');
+  });
 });

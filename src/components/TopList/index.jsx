@@ -42,10 +42,19 @@ function TopList(props) {
             </div>
           )
         )
+          || (
+            (!list || list.length <= 0) && (
+              <div className="top-list-placeholder">
+                <div className="top-list-no-result-text">
+                  No result.
+                </div>
+              </div>
+            )
+          )
         || (
           <ul className="top-app-list">
             {
-              list && list.map((app, index) => (
+              list.map((app, index) => (
                 <li key={app.id} data-rank={index + 1}>
                   <AppBox
                     app={app}

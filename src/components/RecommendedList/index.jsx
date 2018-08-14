@@ -45,9 +45,18 @@ function RecommendedList(props) {
             )
           )
           || (
+            (!list || list.length <= 0) && (
+              <div className="recommended-list-placeholder">
+                <div className="recommended-list-no-result-text">
+                  No result.
+                </div>
+              </div>
+            )
+          )
+          || (
             <ul className="recommended-app-list">
               {
-                list && list.map(app => (
+                list.map(app => (
                   <li key={app.id}>
                     <AppBox app={app} />
                   </li>
