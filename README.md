@@ -84,6 +84,9 @@ React is a component base library and it encourage developer to build the webpag
 When there is no result which match the search keywords, there will be a text box displayed.
 <img src="https://i.imgur.com/fFP4Sih.png" width="375">
 
+For iOS user, the scroll animation is added.
+<img src="https://i.imgur.com/W4bdFP4.gif" width="375">
+
 ### Scroll-in animation and PWA
 Because of the limitation of time, this 2 features are not implemented. But they will be developed it in the future.
 
